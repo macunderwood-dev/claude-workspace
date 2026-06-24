@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C C:\\\\Users\\\\marti\\\\Claude status)",
+      "PowerShell(git -C \"C:\\\\Users\\\\marti\\\\Claude\" status 2>&1)",
+      "PowerShell(gh auth status 2>&1)",
+      "PowerShell(winget install --id GitHub.cli --silent --accept-package-agreements --accept-source-agreements 2>&1)",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); gh --version 2>&1)",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); gh auth login --web -h github.com -p https 2>&1)",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); cd \"C:\\\\Users\\\\marti\\\\Claude\"; git init; git add .; git commit -m \"Initial commit\"; gh repo create claude-workspace --private --source=. --remote=origin --push 2>&1)",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); cd \"C:\\\\Users\\\\marti\\\\Claude\"; git config user.email \"macunderwood@gmail.com\"; git config user.name \"macunderwood-dev\"; git add .; git commit -m \"Initial commit\"; gh repo create claude-workspace --private --source=. --remote=origin --push 2>&1)"
+    ]
+  }
+}
