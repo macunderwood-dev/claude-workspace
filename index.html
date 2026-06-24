@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ADHD, Hyperfocus & Neck Pain | Martin Underwood</title>
+  <meta name="description" content="A structured awareness and movement method for ADHD professionals with persistent neck, shoulder and jaw tension. Developed by Martin Underwood, Alexander Technique teacher." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --text: #1c1c1a;
+      --text-muted: #5f5e5a;
+      --text-light: #888780;
+      --bg: #faf9f7;
+      --bg-surface: #f1efe8;
+      --border: rgba(28,28,26,0.12);
+      --accent: #0f6e56;
+      --accent-light: #e1f5ee;
+      --accent-dark: #085041;
+      --serif: Georgia, 'Times New Roman', serif;
+      --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      font-family: var(--sans);
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* NAV */
+    nav {
+      border-bottom: 0.5px solid var(--border);
+      padding: 20px 0;
+    }
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-name {
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .nav-link {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* HERO */
+    .hero {
+      padding: 80px 0 64px;
+      border-bottom: 0.5px solid var(--border);
+    }
+    .hero-label {
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: normal;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 24px;
+    }
+    .hero-sub {
+      font-size: 19px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 40px;
+      max-width: 580px;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 14px 28px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .btn:hover { background: var(--accent-dark); text-decoration: none; }
+    .btn-ghost {
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      margin-left: 12px;
+    }
+    .btn-ghost:hover { background: var(--accent-light); }
+
+    /* RECOGNITION */
+    .section {
+      padding: 72px 0;
+      border-bottom: 0.5px solid var(--border);
+    }
+    .section-label {
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 16px;
+    }
+    .section h2 {
+      font-family: var(--serif);
+      font-size: clamp(24px, 3.5vw, 34px);
+      font-weight: normal;
+      line-height: 1.25;
+      margin-bottom: 28px;
+    }
+    .section p {
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+    .section p:last-child { margin-bottom: 0; }
+
+    .checklist {
+      list-style: none;
+      margin: 28px 0;
+    }
+    .checklist li {
+      padding: 10px 0 10px 28px;
+      border-bottom: 0.5px solid var(--border);
+      color: var(--text-muted);
+      position: relative;
+      font-size: 16px;
+    }
+    .checklist li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--text-light);
+    }
+    .checklist li:last-child { border-bottom: none; }
+
+    .callout {
+      background: var(--accent-light);
+      border-left: 3px solid var(--accent);
+      padding: 20px 24px;
+      border-radius: 0 4px 4px 0;
+      margin: 32px 0;
+    }
+    .callout p {
+      color: var(--accent-dark);
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* MECHANISM */
+    .mechanism-steps {
+      margin: 32px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .step {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 16px;
+      padding: 24px 0;
+      border-bottom: 0.5px solid var(--border);
+      align-items: start;
+    }
+    .step:last-child { border-bottom: none; }
+    .step-num {
+      font-size: 13px;
+      color: var(--text-light);
+      padding-top: 3px;
+      font-variant-numeric: tabular-nums;
+    }
+    .step-title {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .step-body {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* APPROACH */
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 0.5px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      margin: 32px 0;
+    }
+    .approach-item {
+      background: var(--bg);
+      padding: 24px 20px;
+    }
+    .approach-item-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .approach-item-body {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* OFFERS */
+    .offer-card {
+      border: 0.5px solid var(--border);
+      border-radius: 6px;
+      padding: 28px;
+      margin-bottom: 16px;
+      background: var(--bg);
+    }
+    .offer-card.featured {
+      border: 1.5px solid var(--accent);
+    }
+    .offer-badge {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: var(--accent-light);
+      color: var(--accent-dark);
+      padding: 4px 10px;
+      border-radius: 3px;
+      margin-bottom: 14px;
+    }
+    .offer-title {
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .offer-price {
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .offer-price span {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--text-light);
+    }
+    .offer-desc {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .offer-link {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--accent);
+    }
+
+    /* TESTIMONIAL */
+    .testimonial {
+      background: var(--bg-surface);
+      border-radius: 6px;
+      padding: 36px;
+      margin: 40px 0;
+    }
+    .testimonial blockquote {
+      font-family: var(--serif);
+      font-size: 19px;
+      line-height: 1.55;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+    .testimonial cite {
+      font-size: 14px;
+      color: var(--text-muted);
+      font-style: normal;
+    }
+
+    /* ABOUT */
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 40px;
+      align-items: start;
+    }
+    .about-image {
+      aspect-ratio: 3/4;
+      background: var(--bg-surface);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .about-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* FAQ */
+    .faq-item {
+      border-bottom: 0.5px solid var(--border);
+      padding: 20px 0;
+    }
+    .faq-q {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+    .faq-a {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* FOOTER CTA */
+    .footer-cta {
+      padding: 80px 0;
+      text-align: center;
+    }
+    .footer-cta h2 {
+      font-family: var(--serif);
+      font-size: clamp(24px, 3.5vw, 34px);
+      font-weight: normal;
+      margin-bottom: 16px;
+    }
+    .footer-cta p {
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+
+    footer {
+      border-top: 0.5px solid var(--border);
+      padding: 32px 0;
+    }
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    footer p {
+      font-size: 13px;
+      color: var(--text-light);
+    }
+    footer a {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 600px) {
+      .about-layout { grid-template-columns: 1fr; }
+      .about-image { aspect-ratio: 4/3; }
+      .btn-ghost { margin-left: 0; margin-top: 12px; display: block; text-align: center; }
+      .hero { padding: 56px 0 48px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="https://www.martinunderwood.com" class="nav-name">Martin Underwood</a>
+      <a href="https://www.martinunderwood.com" class="nav-link">← Main site</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <p class="hero-label">For ADHD professionals</p>
+      <h1>The tension that builds<br>when you focus.</h1>
+      <p class="hero-sub">
+        If you have ADHD and chronic neck, shoulder or jaw pain that worsens during concentration —
+        this is a structured method to understand why it happens and develop practical skills to interrupt it.
+      </p>
+      <a href="#webinar" class="btn">Join the free webinar</a>
+      <a href="#offers" class="btn btn-ghost">See all options</a>
+    </div>
+  </section>
+
+  <!-- RECOGNITION -->
+  <section class="section" id="recognition">
+    <div class="container">
+      <p class="section-label">Does this sound familiar?</p>
+      <h2>You've tried things.<br>The tension keeps returning.</h2>
+      <p>
+        You work at a screen. You hyperfocus. Hours pass. When you surface, your neck is locked,
+        your jaw is clenched and your shoulders are somewhere near your ears.
+      </p>
+      <p>
+        You've had massage. You've done the physio stretches. You've adjusted your chair.
+        It helps briefly, then the tension rebuilds — usually faster than before.
+      </p>
+
+      <ul class="checklist">
+        <li>Neck and shoulder tension that builds during concentration and never fully clears</li>
+        <li>Jaw clenching, eye strain or tension headaches that track with your workload</li>
+        <li>Push–crash cycles: you manage, overdo it, flare up, shut down</li>
+        <li>Pain that dulls your thinking and compounds your ADHD symptoms</li>
+        <li>A background sense of bracing — as if your body is always slightly on alert</li>
+        <li>Relief that never fully lasts, whatever you've tried</li>
+      </ul>
+
+      <div class="callout">
+        <p>
+          This pattern is not a posture problem. It is a learned response — a habitual way your
+          nervous system has organised itself around ADHD hyperfocus. It can be changed, but not
+          by stretching harder.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MECHANISM -->
+  <section class="section" id="mechanism">
+    <div class="container">
+      <p class="section-label">What's actually happening</p>
+      <h2>ADHD hyperfocus and the body's bracing response.</h2>
+      <p>
+        During intense focus, attention narrows sharply. The body braces to match — breath shallows,
+        the neck shortens, the shoulders fix, the jaw tightens. This is functional. The problem is
+        that with ADHD, the focus state can last hours without interruption, and the bracing
+        accumulates unnoticed.
+      </p>
+
+      <div class="mechanism-steps">
+        <div class="step">
+          <span class="step-num">01</span>
+          <div>
+            <p class="step-title">Tension accumulates below awareness</p>
+            <p class="step-body">Hyperfocus narrows internal awareness. You do not notice the bracing building until it becomes pain or fatigue.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <div>
+            <p class="step-title">Pain amplifies ADHD symptoms</p>
+            <p class="step-body">Chronic muscular tension increases cognitive load, reduces clarity, worsens brain fog and accelerates emotional depletion.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <div>
+            <p class="step-title">Stretching targets symptoms, not the pattern</p>
+            <p class="step-body">Relief from massage or stretching is real but temporary — because the habit of bracing has not changed. The body quickly returns to what it knows.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">04</span>
+          <div>
+            <p class="step-title">The pattern can be interrupted</p>
+            <p class="step-body">With structured training in body-mind awareness, you can learn to notice bracing earlier, release unnecessary muscular effort and coordinate movement with less strain — during focus, not just after it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROACH -->
+  <section class="section" id="approach">
+    <div class="container">
+      <p class="section-label">The method</p>
+      <h2>Practical self-care skills,<br>not ongoing treatment.</h2>
+      <p>
+        The work draws on Alexander Technique — an evidence-informed method for reducing habitual
+        muscular tension and improving the coordination of movement — combined with behavioural
+        change coaching and direct experience of ADHD hyperfocus.
+      </p>
+      <p>
+        The goal is not posture correction. It is developing skills that you use independently:
+        before, during and after focused work.
+      </p>
+
+      <div class="approach-grid">
+        <div class="approach-item">
+          <p class="approach-item-title">Body-mind awareness</p>
+          <p class="approach-item-body">Learning to notice early signals of bracing before they accumulate into pain.</p>
+        </div>
+        <div class="approach-item">
+          <p class="approach-item-title">Head and neck poise</p>
+          <p class="approach-item-body">Restoring the natural relationship between head, neck and spine — reducing compression and allowing length.</p>
+        </div>
+        <div class="approach-item">
+          <p class="approach-item-title">Habitual pattern change</p>
+          <p class="approach-item-body">Identifying and gradually releasing the specific tension habits linked to your focus style.</p>
+        </div>
+        <div class="approach-item">
+          <p class="approach-item-title">Push–crash interruption</p>
+          <p class="approach-item-body">Practical tools for recognising the build-up before it becomes a flare, and for recovering more efficiently when it does.</p>
+        </div>
+        <div class="approach-item">
+          <p class="approach-item-title">Sustainable behaviour change</p>
+          <p class="approach-item-body">Building micro-habits that work within the reality of ADHD — not discipline-dependent routines that collapse under pressure.</p>
+        </div>
+        <div class="approach-item">
+          <p class="approach-item-title">Lifelong skill</p>
+          <p class="approach-item-body">The aim is self-sufficiency — understanding your pattern well enough to manage it without ongoing support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="section">
+    <div class="container">
+      <div class="testimonial">
+        <blockquote>
+          "Working with Martin gave me a completely different relationship with how I hold tension —
+          particularly during intense periods of work. For the first time I had practical tools
+          rather than just instructions to relax."
+        </blockquote>
+        <cite>Gary Johnstone — Director and Producer</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFERS -->
+  <section class="section" id="offers">
+    <div class="container">
+      <p class="section-label">Ways to work together</p>
+      <h2>Start where it makes sense.</h2>
+      <p>
+        All sessions are online. Work begins with understanding your specific pattern —
+        the tension habits, the hyperfocus triggers, the crash cycle — before building
+        practical skills around them.
+      </p>
+
+      <!-- Webinar -->
+      <div class="offer-card featured" id="webinar" style="margin-top: 32px;">
+        <span class="offer-badge">Start here — free</span>
+        <p class="offer-title">Live webinar: ADHD, hyperfocus and tension</p>
+        <p class="offer-price">Free <span>— 60 minutes, online</span></p>
+        <p class="offer-desc">
+          A structured introduction to the connection between ADHD hyperfocus and chronic
+          neck and shoulder tension. Includes a practical micro-shift you can apply immediately.
+          Live Q&A at the end. No sales pressure, no upsell.
+        </p>
+        <a href="https://calendly.com/martinunderwood" class="btn">Reserve your place</a>
+      </div>
+
+      <!-- 3-day course -->
+      <div class="offer-card">
+        <span class="offer-badge">Short course</span>
+        <p class="offer-title">3-day online course</p>
+        <p class="offer-price">£97 <span>— self-paced, online</span></p>
+        <p class="offer-desc">
+          Three focused modules covering the mechanism, the awareness skills and the
+          practical daily habits. Video-led, with guided practices you can fit into a
+          working day. Lifetime access.
+        </p>
+        <a href="https://calendly.com/martinunderwood" class="offer-link">Find out more →</a>
+      </div>
+
+      <!-- 3-month programme -->
+      <div class="offer-card">
+        <span class="offer-badge">Structured programme</span>
+        <p class="offer-title">3-month programme</p>
+        <p class="offer-price">Contact for pricing <span>— weekly sessions, online</span></p>
+        <p class="offer-desc">
+          A structured 12-week programme for those who want to work in depth — developing
+          awareness skills, tracking your specific pattern, and building the habits needed
+          for lasting change. Weekly video sessions with written support between.
+        </p>
+        <a href="https://calendly.com/martinunderwood" class="offer-link">Book a free conversation →</a>
+      </div>
+
+      <!-- 1-to-1 -->
+      <div class="offer-card">
+        <span class="offer-badge">1-to-1 sessions</span>
+        <p class="offer-title">Individual sessions</p>
+        <p class="offer-price">Contact for pricing <span>— per session, online</span></p>
+        <p class="offer-desc">
+          Flexible 1-to-1 work for those who prefer to work individually at their own pace,
+          or who want to complement an existing programme.
+        </p>
+        <a href="https://calendly.com/martinunderwood" class="offer-link">Book a free conversation →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <p class="section-label">About Martin</p>
+      <div class="about-layout">
+        <div class="about-image">
+          <!-- Replace src with your actual photo -->
+          <img src="https://images.squarespace-cdn.com/content/v1/your-image.jpg" alt="Martin Underwood" onerror="this.style.display='none'" />
+        </div>
+        <div>
+          <h2 style="margin-bottom: 20px;">Martin Underwood</h2>
+          <p>
+            I am an Alexander Technique teacher, behavioural change coach and someone with
+            direct ADHD experience. My practice focuses specifically on the intersection of
+            neurodivergent attention patterns and musculoskeletal pain.
+          </p>
+          <p>
+            I work online with adults who have ADHD and persistent neck, shoulder and jaw
+            tension — the kind that builds during focused work and does not fully resolve with
+            conventional approaches.
+          </p>
+          <p>
+            My interest is in practical skill development: helping people understand their own
+            tension pattern well enough to manage it independently, rather than becoming reliant
+            on ongoing treatment.
+          </p>
+          <p style="margin-top: 24px;">
+            <a href="https://www.martinunderwood.com/about" style="font-size: 15px; font-weight: 500;">
+              Full background →
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <p class="section-label">Common questions</p>
+      <h2>Practical answers.</h2>
+
+      <div class="faq-item">
+        <p class="faq-q">Do I need a formal ADHD diagnosis?</p>
+        <p class="faq-a">No. The pattern described — hyperfocus, accumulating tension, push–crash cycles — is meaningful regardless of formal diagnosis. Many people work with me before or without a formal assessment.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">How is this different from physio or massage?</p>
+        <p class="faq-a">Physio and massage address the symptom — the tight muscle. This work addresses the habit that recreates the tightness. Both have value; they work at different levels.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Is this therapy or counselling?</p>
+        <p class="faq-a">No. The work is movement and awareness-based — closer to skills coaching than therapy. It does not involve psychological treatment or medical advice.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Do sessions require any equipment or space?</p>
+        <p class="faq-a">All sessions are online. You need a webcam, reasonable internet connection and space to stand and move. No equipment is required.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">How quickly do people notice a difference?</p>
+        <p class="faq-a">Most people notice increased awareness of their tension pattern within the first two or three sessions. Lasting change in the pattern typically takes longer — twelve weeks is a reasonable expectation for meaningful habit change.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">What if my pain is severe?</p>
+        <p class="faq-a">If you are in acute pain or have an underlying medical condition that has not been investigated, please see your GP or a physiotherapist first. This work is appropriate for persistent, chronic tension — not acute injury.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER CTA -->
+  <section class="footer-cta">
+    <div class="container">
+      <h2>Start with the free webinar.</h2>
+      <p>
+        60 minutes. A clear explanation of the mechanism, a practical tool you can use immediately,
+        and space to ask questions. No commitment required.
+      </p>
+      <a href="https://calendly.com/martinunderwood" class="btn">Reserve your place</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2024 Martin Underwood. All rights reserved.</p>
+      <div style="display: flex; gap: 24px;">
+        <a href="https://www.martinunderwood.com">Main site</a>
+        <a href="https://www.martinunderwood.com/privacy">Privacy</a>
+        <a href="mailto:hello@martinunderwood.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
